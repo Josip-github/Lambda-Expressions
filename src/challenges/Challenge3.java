@@ -1,5 +1,6 @@
 package challenges;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,6 +32,15 @@ public class Challenge3 {
                 .map(s -> capitalize(s))
                 .sorted()
                 .forEach(System.out::println);
+
+        // another solution:
+        System.out.println("\nAnother solution:");
+        List<String> list2 = new ArrayList<>();
+        topNames2015.forEach(name -> list2.add(capitalize(name)));
+        // list2.sort((s1, s2) -> s1.compareTo(s2));
+        // list2.forEach(s -> System.out.println(s));
+        list2.sort(String::compareTo);
+        list2.forEach(System.out::println);
 
 
     }
