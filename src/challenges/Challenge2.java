@@ -44,6 +44,13 @@ public class Challenge2 {
 
         //Supplier<String> iLoveJava = () -> "I love Java!";
         Supplier<String> iLoveJava = () -> { return "I love Java!"; };
+
+        //Challenge 6:
+        // the Supplier won't do anything until we use it. use this supplier
+        // to assign the string "I love Java" to a variable called supplierResult
+
+        String supplierResult = iLoveJava.get();
+        System.out.println("Ma samo da vidim: " + supplierResult);
     }
 
     // Challenge 4:
