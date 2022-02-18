@@ -1,6 +1,7 @@
 package challenges;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Challenge2 {
 
@@ -36,6 +37,13 @@ public class Challenge2 {
         System.out.println(lambdaFunction.apply("1234567890"));
         System.out.println("\n");
         System.out.println(everySecondCharacter(lambdaFunction, "1234567890"));
+
+        // Challenge 5:
+        // Write a lambda expression that maps to the java.util.Supplier interface
+        //This lambda should return the string "I love Java!" Assign it to a variable called iLoveJava
+
+        //Supplier<String> iLoveJava = () -> "I love Java!";
+        Supplier<String> iLoveJava = () -> { return "I love Java!"; };
     }
 
     // Challenge 4:
