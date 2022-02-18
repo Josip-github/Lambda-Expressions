@@ -3,6 +3,7 @@ package challenges;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Challenge3 {
 
@@ -42,6 +43,23 @@ public class Challenge3 {
         list2.sort(String::compareTo);
         list2.forEach(System.out::println);
 
+        // print how many names there are that begin with the letter 'A'
+        long namesBeginningWithA = topNames2015
+                .stream()
+                .map(name -> capitalize(name))
+                .filter(name -> name.startsWith("A"))
+                .count();
+        System.out.println("\nNumber of names beginning with 'A' is: " + namesBeginningWithA);
+
+        //last challenge:
+        // add a terminal operation to this chain so that the peek call
+        // will execute
+        System.out.println("\nLast challenge:");
+        topNames2015
+                .stream()
+                .map(name -> capitalize(name))
+                .peek(System.out::println)
+                .collect(Collectors.toList());
 
     }
 
