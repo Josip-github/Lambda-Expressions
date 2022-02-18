@@ -34,14 +34,17 @@ public class Challenge2 {
         };
 
         System.out.println(lambdaFunction.apply("1234567890"));
-
+        System.out.println("\n");
+        System.out.println(everySecondCharacter(lambdaFunction, "1234567890"));
     }
 
     // Challenge 4:
     //Write a method called everySecondCharacter that accepts the function as a parameter and executes it
     // wiith the argument "1234567890"; it should return the result of the function
 
-
+    public static String everySecondCharacter(Function<String, String> lambdaFunction, String str){
+        return lambdaFunction.apply(str);
+    }
 
 
 }
