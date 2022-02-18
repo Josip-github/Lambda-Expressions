@@ -37,5 +37,11 @@ public class Challenge2 {
 
     }
 
+    // Challenge 4:
+    //Write a method called everySecondCharacter that accepts the function as a parameter and executes it
+    // wiith the argument "1234567890"; it should return the result of the function
+
+
+
 
 }
